@@ -1,0 +1,209 @@
+/* Usamos fuentes seguras del sistema */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(135deg, #f0faff, #ffffff);
+  color: #222;
+  margin: 0;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+header {
+  background: radial-gradient(circle, #00bcd4, #0077b6);
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: slideDown 1s ease forwards;
+}
+header h1 {
+  margin: 0.5rem 0;
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+header p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+#menu-toggle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #fff;
+  color: #0077b6;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  display: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+#menu-toggle:hover {
+  transform: rotate(90deg);
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  transition: transform 0.3s, color 0.3s;
+}
+nav a:hover {
+  color: #ffe082;
+  transform: scale(1.1);
+}
+section {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1s ease forwards;
+  max-width: 1100px;
+}
+section:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+/* TABLAS */
+table {
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 90%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+th {
+  background-color: #00bcd4;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+td, th {
+  padding: 0.75rem;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background: #f1faff;
+}
+tr:hover {
+  background: #e0f7fa;
+  cursor: pointer;
+}
+/* FORMULARIO */
+form {
+  max-width: 600px;
+  margin: auto;
+  animation: fadeIn 1.5s ease forwards;
+}
+form input, form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+form input:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px rgba(0,188,212,0.4);
+  outline: none;
+}
+form input[type="submit"], form input[type="reset"] {
+  width: auto;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0077b6, #00bcd4);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+/* TESTIMONIOS */
+blockquote {
+  font-style: italic;
+  border-left: 5px solid #00bcd4;
+  padding-left: 1rem;
+  color: #444;
+  background: #f1faff;
+  border-radius: 8px;
+  margin: 1rem 0;
+  position: relative;
+  animation: fadeIn 2s ease forwards;
+}
+blockquote:before {
+  content: '❝';
+  font-size: 2rem;
+  color: #00bcd4;
+  position: absolute;
+  top: -10px;
+  left: -15px;
+}
+/* EQUIPO */
+article {
+  background: linear-gradient(135deg, #ffffff, #f1faff);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+article:hover {
+  transform: rotateY(3deg) scale(1.02);
+}
+/* FOOTER */
+footer {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+  nav ul.show {
+    display: flex;
+  }
+}
+/* ANIMACIONES */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
